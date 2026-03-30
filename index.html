@@ -1,1 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Artesão Nato - Artesanatos Feitos com Amor</title>
+    <meta name="description" content="Artesanatos exclusivos feitos à mão. Peças únicas com qualidade e dedicação. Confira nossos trabalhos e faça seu pedido!">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #2d3436;
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1452860606245-08befc0ff44b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .btn-hero {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .btn-hero:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Seção Sobre */
+        .about {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3436;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #636e72;
+        }
+
+        .highlight {
+            color: #d4a373;
+            font-weight: 600;
+        }
+
+        /* Seção de Cards */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #d4a373;
+            margin: 0.5rem auto 0;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3436;
+        }
+
+        .card-description {
+            color: #636e72;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #d4a373;
+            margin-bottom: 1rem;
+        }
+
+        /* Botões de ação */
+        .buttons-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .btn-whatsapp, .btn-instagram {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(214, 41, 118, 0.4);
+        }
+
+        /* Banner de contato */
+        .contact-banner {
+            background: linear-gradient(135deg, #2d3436 0%, #1e272e 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        .contact-banner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-banner p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .btn-whatsapp, .btn-instagram {
+                display: flex;
+                margin: 10px auto;
+                width: fit-content;
+            }
+
+            .contact-banner {
+                padding: 2rem;
+            }
+
+            .contact-banner h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O Artesão Nato</h1>
+            <p>Transformando matéria-prima em arte com dedicação, amor e tradição. Cada peça é única, feita à mão com todo carinho para você!</p>
+            <a href="#" class="btn-hero" id="whatsappHeroBtn">
+                <i class="fab fa-whatsapp"></i> Faça seu Pedido
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Seção Sobre -->
+        <section class="about">
+            <h2>Sobre <span class="highlight">Nós</span></h2>
+            <p>Com mais de 10 anos de experiência, criamos artesanatos exclusivos que contam histórias. Trabalhamos com madeira, cerâmica, crochê e diversos materiais para transformar ideias em peças únicas. Nosso compromisso é com a qualidade e a satisfação de cada cliente.</p>
+        </section>
+
+        <!-- Cards de Artesanatos -->
+        <h2 class="section-title">Nossas Criações</h2>
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Card 1 - Peça em Madeira -->
+            <div class="card">
+                <img class="card-image" src="https://images.unsplash.com/photo-1562329267-1a5e9f0d8f8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Escultura em Madeira">
+                <div class="card-content">
+                    <h3 class="card-title">Escultura em Madeira</h3>
+                    <p class="card-description">Peça única esculpida à mão em madeira de demolição. Acabamento com cera vegetal, perfeita para decoração.</p>
+                    <p class="card-price">R$ 189,90</p>
+                </div>
+            </div>
+
+            <!-- Card 2 - Peça em Cerâmica -->
+            <div class="card">
+                <img class="card-image" src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cerâmica Artesanal">
+                <div class="card-content">
+                    <h3 class="card-title">Cerâmica Artesanal</h3>
+                    <p class="card-description">Vaso em cerâmica pintado à mão com esmaltes naturais. Impermeável e resistente.</p>
+                    <p class="card-price">R$ 79,90</p>
+                </div>
+            </div>
+
+            <!-- Card 3 - Crochê Personalizado -->
+            <div class="card">
+                <img class="card-image" src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amigurumi Crochê">
+                <div class="card-content">
+                    <h3 class="card-title">Amigurumi Personalizado</h3>
+                    <p class="card-description">Bonecos em crochê feitos sob encomenda. Escolha o modelo e as cores!</p>
+                    <p class="card-price">Sob Consulta</p>
+                </div>
+            </div>
+
+            <!-- Card 4 - Quadro em Madeira -->
+            <div class="card">
+                <img class="card-image" src="https://images.unsplash.com/photo-1513519245088-0e12902e35a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arte em Madeira">
+                <div class="card-content">
+                    <h3 class="card-title">Arte em Madeira</h3>
+                    <p class="card-description">Quadro decorativo com técnica de marchetaria. Peça exclusiva e sofisticada.</p>
+                    <p class="card-price">R$ 249,90</p>
+                </div>
+            </div>
+
+            <!-- Card 5 - Porta Retratos Artesanal -->
+            <div class="card">
+                <img class="card-image" src="https://images.unsplash.com/photo-1513519245088-0e12902e35a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Porta Retratos">
+                <div class="card-content">
+                    <h3 class="card-title">Porta Retratos Rústico</h3>
+                    <p class="card-description">Porta retratos em madeira com entalhes artesanais. Presente ideal para momentos especiais.</p>
+                    <p class="card-price">R$ 59,90</p>
+                </div>
+            </div>
+
+            <!-- Card 6 - Cestaria em Fibra Natural -->
+            <div class="card">
+                <img class="card-image" src="https://images.unsplash.com/photo-1596516109370-29001ec8ec36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cestaria">
+                <div class="card-content">
+                    <h3 class="card-title">Cestaria Natural</h3>
+                    <p class="card-description">Cestas trançadas à mão com fibras naturais. Ecológicas e versáteis.</p>
+                    <p class="card-price">R$ 89,90</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="buttons-section">
+            <a href="#" class="btn-whatsapp" id="whatsappBtn">
+                <i class="fab fa-whatsapp fa-lg"></i> Comprar pelo WhatsApp
+            </a>
+            <a href="#" class="btn-instagram" id="instagramBtn">
+                <i class="fab fa-instagram fa-lg"></i> Siga-nos no Instagram
+            </a>
+        </div>
+
+        <!-- Banner de Contato -->
+        <div class="contact-banner">
+            <h3>✨ Peça seu artesanato personalizado! ✨</h3>
+            <p>Entre em contato e faça um pedido exclusivo. Trabalhamos com encomendas e criamos a peça dos seus sonhos!</p>
+            <a href="#" class="btn-whatsapp" id="whatsappBannerBtn" style="background: white; color: #25D366;">
+                <i class="fab fa-whatsapp"></i> Fale Conosco
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 O Artesão Nato - Todos os direitos reservados</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Artesanato feito com amor e dedicação 💙</p>
+    </footer>
+
+    <script>
+        // CONFIGURAÇÃO - SUBSTITUA PELOS SEUS DADOS REAIS
+        const WHATSAPP_NUMBER = '5511999999999'; // Coloque seu número com DDD (ex: 5511999999999)
+        const INSTAGRAM_USERNAME = 'artesaonato'; // Coloque seu @ do Instagram
+        
+        const DEFAULT_MESSAGE = 'Olá! Vi os artesanatos no site e tenho interesse em fazer um pedido.';
+        
+        function getWhatsAppLink(message = DEFAULT_MESSAGE) {
+            return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+        }
+        
+        function getInstagramLink() {
+            return `https://instagram.com/${INSTAGRAM_USERNAME}`;
+        }
+        
+        function updateWhatsAppButtons() {
+            const whatsappButtons = document.querySelectorAll('#whatsappHeroBtn, #whatsappBtn, #whatsappBannerBtn');
+            const whatsappLink = getWhatsAppLink();
+            
+            whatsappButtons.forEach(button => {
+                button.href = whatsappLink;
+                button.target = '_blank';
+                button.rel = 'noopener noreferrer';
+            });
+        }
+        
+        function updateInstagramButton() {
+            const instagramBtn = document.getElementById('instagramBtn');
+            if (instagramBtn) {
+                instagramBtn.href = getInstagramLink();
+                instagramBtn.target = '_blank';
+                instagramBtn.rel = 'noopener noreferrer';
+            }
+        }
+        
+        function setupCardClick() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card) => {
+                const title = card.querySelector('.card-title')?.innerText || 'produto';
+                const price = card.querySelector('.card-price')?.innerText || '';
+                
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', () => {
+                    const message = `Olá! Tenho interesse no produto: ${title} - ${price}. Poderia me passar mais informações?`;
+                    window.open(getWhatsAppLink(message), '_blank');
+                });
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            updateWhatsAppButtons();
+            updateInstagramButton();
+            setupCardClick();
+        });
+    </script>
+</body>
+</html>
