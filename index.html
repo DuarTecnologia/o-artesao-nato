@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Artesão Nato - Artesanato em Madeira | Peças Únicas e Rústicas</title>
-    <meta name="description" content="Especialistas em artesanato em madeira. Esculturas, móveis rústicos, utensílios e peças decorativas feitas à mão com madeira de demolição e reflorestamento.">
-    <!-- Google Fonts --><!-- Card 1 - Escultura em Madeira -->
-
+    <title>O Artesão Nato - Artesanato em Madeira</title>
+    <meta name="description" content="Especialistas em artesanato em madeira. Peças únicas feitas à mão.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -28,19 +25,16 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Header / Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1519947486511-46149fa4d8fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
         }
 
         .hero-content {
@@ -52,15 +46,11 @@
             font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            letter-spacing: 2px;
-            animation: fadeInUp 0.8s ease;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            font-family: 'Poppins', sans-serif;
-            animation: fadeInUp 0.8s ease 0.2s both;
         }
 
         .btn-hero {
@@ -72,25 +62,20 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease 0.4s both;
             border: 2px solid #b87c4f;
         }
 
         .btn-hero:hover {
             background: transparent;
             color: #b87c4f;
-            transform: translateY(-3px);
-            border-color: #b87c4f;
         }
 
-        /* Container principal */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
-        /* Seção Sobre */
         .about {
             text-align: center;
             margin-bottom: 4rem;
@@ -100,8 +85,6 @@
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: #5a3a2a;
-            position: relative;
-            display: inline-block;
         }
 
         .about h2:after {
@@ -125,13 +108,11 @@
             font-weight: 600;
         }
 
-        /* Seção de Cards */
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 3rem;
             color: #5a3a2a;
-            position: relative;
         }
 
         .section-title:after {
@@ -185,14 +166,12 @@
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: #3e2c1f;
-            font-family: 'Playfair Display', serif;
         }
 
         .card-description {
             color: #8b6b4f;
             font-size: 0.9rem;
             margin-bottom: 1rem;
-            line-height: 1.5;
         }
 
         .card-price {
@@ -210,84 +189,6 @@
             gap: 5px;
         }
 
-        /* Seção Instagram Feed */
-        .instagram-feed {
-            background: linear-gradient(135deg, #e8dfd3 0%, #dacfbf 100%);
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .instagram-feed h3 {
-            font-size: 1.8rem;
-            color: #5a3a2a;
-            margin-bottom: 1rem;
-        }
-
-        .instagram-feed p {
-            margin-bottom: 1.5rem;
-            color: #6b4c38;
-        }
-
-        .btn-instagram-feed {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-instagram-feed:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        /* Seção de Diferenciais */
-        .features {
-            background: linear-gradient(135deg, #e8dfd3 0%, #dacfbf 100%);
-            border-radius: 30px;
-            padding: 3rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-item i {
-            font-size: 2.5rem;
-            color: #b87c4f;
-            margin-bottom: 1rem;
-        }
-
-        .feature-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #5a3a2a;
-        }
-
-        /* Botões de ação */
         .buttons-section {
             text-align: center;
             margin: 3rem 0;
@@ -302,7 +203,6 @@
             text-decoration: none;
             font-weight: 600;
             margin: 0 10px;
-            transition: all 0.3s ease;
             font-size: 1rem;
         }
 
@@ -315,21 +215,13 @@
         .btn-whatsapp:hover {
             background: transparent;
             color: #25D366;
-            transform: translateY(-2px);
         }
 
         .btn-instagram {
             background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
             color: white;
-            border: 2px solid transparent;
         }
 
-        .btn-instagram:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        /* Banner de contato */
         .contact-banner {
             background: linear-gradient(135deg, #5a3a2a 0%, #3e2c1f 100%);
             border-radius: 20px;
@@ -342,12 +234,6 @@
         .contact-banner h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .contact-banner p {
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
         }
 
         .btn-banner {
@@ -358,15 +244,8 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
         }
 
-        .btn-banner:hover {
-            background: #9a623d;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
         footer {
             background: #2c241a;
             color: #d4c5b5;
@@ -375,58 +254,22 @@
             margin-top: 2rem;
         }
 
-        /* Animações */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsividade */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
             }
-
             .hero p {
                 font-size: 1rem;
             }
-
-            .container {
-                padding: 2rem 1rem;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-            }
-
             .btn-whatsapp, .btn-instagram {
                 display: flex;
                 margin: 10px auto;
                 width: fit-content;
             }
-
-            .contact-banner {
-                padding: 2rem;
-            }
-
-            .contact-banner h3 {
-                font-size: 1.3rem;
-            }
-
-            .features, .instagram-feed {
-                padding: 2rem;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>O Artesão Nato</h1>
@@ -438,121 +281,83 @@
     </section>
 
     <div class="container">
-        <!-- Seção Sobre -->
         <section class="about">
             <h2>Sobre o <span class="highlight">Artesão</span></h2>
-            <p>Com mais de 15 anos de experiência na arte da marcenaria e escultura em madeira, transformamos matéria-prima nobre em obras de arte. Trabalhamos com madeiras de demolição, reflorestamento e peças certificadas, garantindo beleza, durabilidade e respeito ao meio ambiente. Cada peça é única, feita à mão com técnicas tradicionais e acabamento impecável.</p>
+            <p>Com mais de 15 anos de experiência na arte da marcenaria e escultura em madeira, transformamos matéria-prima nobre em obras de arte. Trabalhamos com madeiras de demolição, reflorestamento e peças certificadas, garantindo beleza, durabilidade e respeito ao meio ambiente.</p>
         </section>
 
-        <!-- Cards de Artesanatos em Madeira -->
         <h2 class="section-title">Nossas Criações em Madeira</h2>
         <div class="cards-grid" id="cardsGrid">
-            <!-- Card 1 - Escultura em Madeira -->
+            
+            <!-- Card 1 - Casa Verde -->
             <div class="card">
-                <img class="card-image" src="imagens/casa_verde.png" alt="Casa Verde">
+                <img class="card-image" src="imagens/casa_verde.png" alt="Casinha de Madeira Verde">
                 <div class="card-content">
-                    <h3 class="card-title">Escultura casinha de madeira</h3>
-                    <p class="card-description">Peça única esculpida em madeira de ipê, com formas fluidas inspiradas na natureza. Acabamento com cera de carnaúba.</p>
+                    <h3 class="card-title">Casinha de Madeira Verde</h3>
+                    <p class="card-description">Peça única esculpida em madeira, com formas delicadas inspiradas na natureza. Acabamento artesanal impecável.</p>
                     <p class="card-price">R$ 199,90</p>
                     <p class="card-material"><i class="fas fa-tree"></i> Madeira: Ipê - 35cm</p>
                 </div>
             </div>
 
-            <!-- Card 2 - Tábua de Corte Premium -->
+            <!-- Card 2 - Casa Verde 2 -->
             <div class="card">
-                <img class="card-image" src="imagens/tabua-corte.jpg" alt="Tábua de Corte em Madeira">
+                <img class="card-image" src="imagens/casa_verde_2.png" alt="Casinha de Madeira Verde 2">
                 <div class="card-content">
-                    <h3 class="card-title">Tábua de Corte Premium</h3>
-                    <p class="card-description">Tábua em madeira de freijó com design moderno e acabamento alimentício. Peça funcional e decorativa.</p>
-                    <p class="card-price">R$ 189,90</p>
-                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Freijó - 40x25cm</p>
+                    <h3 class="card-title">Casinha Rústica</h3>
+                    <p class="card-description">Miniatura de casa em madeira, perfeita para decoração ou presente. Detalhes esculpidos à mão.</p>
+                    <p class="card-price">R$ 179,90</p>
+                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Cedro - 30cm</p>
                 </div>
             </div>
 
-            <!-- Card 3 - Relógio de Parede Rústico -->
+            <!-- Card 3 - Casa Verde 3 -->
             <div class="card">
-                <img class="card-image" src="imagens/relogio-rustico.jpg" alt="Relógio de Madeira">
+                <img class="card-image" src="imagens/casa_verde_3.png" alt="Casinha de Madeira Verde 3">
                 <div class="card-content">
-                    <h3 class="card-title">Relógio Rústico</h3>
-                    <p class="card-description">Relógio de parede em madeira de demolição, com marcadores em metal escovado. Peça exclusiva.</p>
-                    <p class="card-price">R$ 279,90</p>
-                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Demolição - 40cm</p>
-                </div>
-            </div>
-
-            <!-- Card 4 - Suporte para Vaso -->
-            <div class="card">
-                <img class="card-image" src="imagens/suporte-vaso.jpg" alt="Suporte para Vaso">
-                <div class="card-content">
-                    <h3 class="card-title">Suporte para Vaso</h3>
-                    <p class="card-description">Estrutura em madeira maciça para plantas, com design contemporâneo. Ideal para decorar ambientes.</p>
+                    <h3 class="card-title">Casinha Decorativa</h3>
+                    <p class="card-description">Peça decorativa em madeira, ideal para compor ambientes rústicos e aconchegantes.</p>
                     <p class="card-price">R$ 159,90</p>
-                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Cumaru - 50cm</p>
+                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Freijó - 28cm</p>
                 </div>
             </div>
 
-            <!-- Card 5 - Escultura Abstrata -->
+            <!-- Card 4 - Casa Madeira -->
             <div class="card">
-                <img class="card-image" src="imagens/escultura-abstrata.jpg" alt="Escultura Abstrata">
+                <img class="card-image" src="imagens/casa_madeira.png" alt="Casinha de Madeira Natural">
                 <div class="card-content">
-                    <h3 class="card-title">Escultura Abstrata</h3>
-                    <p class="card-description">Peça decorativa esculpida à mão, com formas geométricas e acabamento em óleo natural.</p>
-                    <p class="card-price">R$ 449,90</p>
-                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Jatobá - 45cm</p>
+                    <h3 class="card-title">Casinha Natural</h3>
+                    <p class="card-description">Escultura em madeira com acabamento natural, preservando a beleza original da madeira.</p>
+                    <p class="card-price">R$ 219,90</p>
+                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Jatobá - 32cm</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Seção Instagram - Link Direto para seu Perfil -->
-        <div class="instagram-feed">
-            <h3><i class="fab fa-instagram"></i> Siga nosso trabalho no Instagram!</h3>
-            <p>Acompanhe os bastidores, novidades e peças exclusivas em nosso perfil. Veja todo o processo criativo de cada obra em madeira.</p>
-            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" class="btn-instagram-feed" id="instagramProfileBtn">
-                <i class="fab fa-instagram fa-lg"></i> @clodoaldodsan
-            </a>
-        </div>
-
-        <!-- Seção de Diferenciais -->
-        <div class="features">
-            <h3 style="font-size: 1.8rem; color: #5a3a2a;">Por que escolher nosso trabalho?</h3>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-hand-sparkles"></i>
-                    <h4>Feito à Mão</h4>
-                    <p>Cada peça é esculpida, lixada e finalizada manualmente com técnicas tradicionais.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Madeira Sustentável</h4>
-                    <p>Utilizamos madeiras de reflorestamento e demolição com certificação ambiental.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-paintbrush-fine"></i>
-                    <h4>Acabamento Premium</h4>
-                    <p>Acabamento com óleos e ceras naturais que realçam a beleza da madeira.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-gem"></i>
-                    <h4>Peças Exclusivas</h4>
-                    <p>Cada criação é única, com design original e personalizado para cada cliente.</p>
+            <!-- Card 5 - Casa Vermelho -->
+            <div class="card">
+                <img class="card-image" src="imagens/casa_vermelho.png" alt="Casinha de Madeira Vermelha">
+                <div class="card-content">
+                    <h3 class="card-title">Casinha Charmosa</h3>
+                    <p class="card-description">Peça exclusiva com detalhes em pintura artesanal. Perfeita para colecionadores.</p>
+                    <p class="card-price">R$ 239,90</p>
+                    <p class="card-material"><i class="fas fa-tree"></i> Madeira: Peroba - 35cm</p>
                 </div>
             </div>
+
         </div>
 
-        <!-- Botões de Ação -->
         <div class="buttons-section">
             <a href="#" class="btn-whatsapp" id="whatsappBtn">
                 <i class="fab fa-whatsapp fa-lg"></i> Comprar pelo WhatsApp
             </a>
-            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" class="btn-instagram" id="instagramBtn">
+            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" class="btn-instagram">
                 <i class="fab fa-instagram fa-lg"></i> Siga-nos no Instagram
             </a>
         </div>
 
-        <!-- Banner de Contato -->
         <div class="contact-banner">
             <h3>✨ Encomende sua peça exclusiva em madeira! ✨</h3>
-            <p>Quer uma peça personalizada? Entre em contato e transforme sua ideia em realidade com nosso trabalho artesanal.</p>
+            <p>Quer uma peça personalizada? Entre em contato e transforme sua ideia em realidade.</p>
             <a href="#" class="btn-banner" id="whatsappBannerBtn">
                 <i class="fab fa-whatsapp"></i> Fale Conosco
             </a>
@@ -561,54 +366,36 @@
 
     <footer>
         <p>&copy; 2024 O Artesão Nato - Artesanato em Madeira</p>
-        <p style="margin-top: 10px; font-size: 0.9rem;">Transformando madeira em arte com amor e dedicação 🌳</p>
-        <p style="margin-top: 10px; font-size: 0.8rem;">
-            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" style="color: #d4c5b5; text-decoration: none;">
+        <p>Transformando madeira em arte com amor e dedicação 🌳</p>
+        <p>
+            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" style="color: #d4c5b5;">
                 <i class="fab fa-instagram"></i> @clodoaldodsan
             </a>
         </p>
     </footer>
 
     <script>
-        // CONFIGURAÇÃO - SUBSTITUA PELO SEU NÚMERO REAL
-        const WHATSAPP_NUMBER = '5511999999999'; // Coloque seu número com DDD (ex: 5511999999999)
-        const INSTAGRAM_URL = 'https://www.instagram.com/clodoaldodsan';
+        // COLOQUE SEU NÚMERO DO WHATSAPP AQUI (com DDD, sem espaços)
+        const WHATSAPP_NUMBER = '5511999999999';
         
-        const DEFAULT_MESSAGE = 'Olá! Vi os artesanatos em madeira no site e tenho interesse em fazer um pedido.';
-        
-        function getWhatsAppLink(message = DEFAULT_MESSAGE) {
+        function getWhatsAppLink(message = 'Olá! Vi os artesanatos em madeira no site e tenho interesse em fazer um pedido.') {
             return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         }
         
-        function updateWhatsAppButtons() {
-            const whatsappButtons = document.querySelectorAll('#whatsappHeroBtn, #whatsappBtn, #whatsappBannerBtn');
-            const whatsappLink = getWhatsAppLink();
-            
-            whatsappButtons.forEach(button => {
-                button.href = whatsappLink;
-                button.target = '_blank';
-                button.rel = 'noopener noreferrer';
-            });
-        }
+        // Configurar botões do WhatsApp
+        document.querySelectorAll('#whatsappHeroBtn, #whatsappBtn, #whatsappBannerBtn').forEach(btn => {
+            btn.href = getWhatsAppLink();
+            btn.target = '_blank';
+        });
         
-        function setupCardClick() {
-            const cards = document.querySelectorAll('.card');
-            cards.forEach((card) => {
-                const title = card.querySelector('.card-title')?.innerText || 'produto';
-                const price = card.querySelector('.card-price')?.innerText || '';
-                const material = card.querySelector('.card-material')?.innerText || '';
-                
-                card.style.cursor = 'pointer';
-                card.addEventListener('click', () => {
-                    const message = `Olá! Tenho interesse no produto: ${title} - ${price}. ${material}. Poderia me passar mais informações sobre esta peça em madeira?`;
-                    window.open(getWhatsAppLink(message), '_blank');
-                });
+        // Configurar cards para abrir WhatsApp
+        document.querySelectorAll('.card').forEach(card => {
+            const title = card.querySelector('.card-title')?.innerText || 'produto';
+            const price = card.querySelector('.card-price')?.innerText || '';
+            card.addEventListener('click', () => {
+                const message = `Olá! Tenho interesse no produto: ${title} - ${price}. Poderia me passar mais informações?`;
+                window.open(getWhatsAppLink(message), '_blank');
             });
-        }
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            updateWhatsAppButtons();
-            setupCardClick();
         });
     </script>
 </body>
