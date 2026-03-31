@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Artesão Nato - Artesanato em Madeira</title>
-    <meta name="description" content="Especialistas em artesanato em madeira. Peças únicas feitas à mão.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>O Artesão Nato - Artesanato em Madeira | Histórias em Madeira</title>
+    <meta name="description" content="Conheça a história inspiradora de quem descobriu o talento para artesanato em madeira após os 50 anos. Peças únicas feitas com alma.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -16,7 +18,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #faf7f2;
+            background: #fef9f0;
             color: #3e2c1f;
             line-height: 1.6;
         }
@@ -25,16 +27,19 @@
             font-family: 'Playfair Display', serif;
         }
 
+        /* Header / Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1519947486511-46149fa4d8fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            background-attachment: fixed;
+            height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            position: relative;
         }
 
         .hero-content {
@@ -43,14 +48,18 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
+            font-size: 4.5rem;
+            font-weight: 800;
             margin-bottom: 1rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 0.8s ease;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+            animation: fadeInUp 0.8s ease 0.2s both;
         }
 
         .btn-hero {
@@ -62,29 +71,39 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease 0.4s both;
             border: 2px solid #b87c4f;
         }
 
         .btn-hero:hover {
             background: transparent;
             color: #b87c4f;
+            transform: translateY(-3px);
         }
 
+        /* Container principal */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
+        /* Seção Sobre - História do Artesão */
         .about {
             text-align: center;
             margin-bottom: 4rem;
+            background: linear-gradient(135deg, #fff 0%, #fef5e8 100%);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
             color: #5a3a2a;
+            position: relative;
+            display: inline-block;
         }
 
         .about h2:after {
@@ -93,26 +112,110 @@
             width: 80px;
             height: 3px;
             background: #b87c4f;
-            margin: 0.5rem auto 0;
+            margin: 0.8rem auto 0;
         }
 
-        .about p {
-            max-width: 800px;
+        .about .age-badge {
+            display: inline-block;
+            background: #b87c4f;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .about .story-text {
+            max-width: 850px;
             margin: 0 auto;
             font-size: 1.1rem;
-            color: #6b4c38;
+            color: #5a4a3a;
+            line-height: 1.8;
+        }
+
+        .about .story-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about .story-text .highlight-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #b87c4f;
+            font-weight: 500;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-left: 4px solid #b87c4f;
+            background: #fef5e8;
         }
 
         .highlight {
             color: #b87c4f;
-            font-weight: 600;
+            font-weight: 700;
         }
 
+        /* Timeline de descoberta */
+        .discovery-timeline {
+            background: linear-gradient(135deg, #e8dfd3 0%, #dacfbf 100%);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .discovery-timeline h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #5a3a2a;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-icon {
+            width: 70px;
+            height: 70px;
+            background: #b87c4f20;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .timeline-icon i {
+            font-size: 2rem;
+            color: #b87c4f;
+        }
+
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #5a3a2a;
+        }
+
+        /* Seção de Cards */
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 3rem;
             color: #5a3a2a;
+            position: relative;
         }
 
         .section-title:after {
@@ -189,6 +292,52 @@
             gap: 5px;
         }
 
+        /* Seção de Diferenciais */
+        .features {
+            background: linear-gradient(135deg, #e8dfd3 0%, #dacfbf 100%);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .features h3 {
+            font-size: 1.8rem;
+            color: #5a3a2a;
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #b87c4f;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #5a3a2a;
+        }
+
+        /* Botões de ação */
         .buttons-section {
             text-align: center;
             margin: 3rem 0;
@@ -203,6 +352,7 @@
             text-decoration: none;
             font-weight: 600;
             margin: 0 10px;
+            transition: all 0.3s ease;
             font-size: 1rem;
         }
 
@@ -215,13 +365,21 @@
         .btn-whatsapp:hover {
             background: transparent;
             color: #25D366;
+            transform: translateY(-2px);
         }
 
         .btn-instagram {
             background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
             color: white;
+            border: 2px solid transparent;
         }
 
+        .btn-instagram:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Banner de contato */
         .contact-banner {
             background: linear-gradient(135deg, #5a3a2a 0%, #3e2c1f 100%);
             border-radius: 20px;
@@ -234,6 +392,12 @@
         .contact-banner h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-banner p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
         }
 
         .btn-banner {
@@ -244,8 +408,15 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
 
+        .btn-banner:hover {
+            background: #9a623d;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
         footer {
             background: #2c241a;
             color: #d4c5b5;
@@ -254,47 +425,126 @@
             margin-top: 2rem;
         }
 
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             .hero p {
                 font-size: 1rem;
+            }
+            .container {
+                padding: 2rem 1rem;
+            }
+            .about {
+                padding: 1.5rem;
+            }
+            .about h2 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
             }
             .btn-whatsapp, .btn-instagram {
                 display: flex;
                 margin: 10px auto;
                 width: fit-content;
             }
+            .discovery-timeline {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>O Artesão Nato</h1>
-            <p>Artesanato em madeira com alma e tradição. Cada peça conta uma história única esculpida à mão.</p>
+            <p>Histórias em madeira, esculpidas com alma e uma descoberta tardia que virou paixão.</p>
             <a href="#" class="btn-hero" id="whatsappHeroBtn">
-                <i class="fab fa-whatsapp"></i> Encomende sua Peça
+                <i class="fab fa-whatsapp"></i> Conheça meu trabalho
             </a>
         </div>
     </section>
 
     <div class="container">
+        <!-- Seção Sobre - História do Artesão -->
         <section class="about">
+            <div class="age-badge">
+                <i class="fas fa-calendar-alt"></i> Uma história que inspira
+            </div>
             <h2>Sobre o <span class="highlight">Artesão</span></h2>
-            <p>Com mais de 15 anos de experiência na arte da marcenaria e escultura em madeira, transformamos matéria-prima nobre em obras de arte. Trabalhamos com madeiras de demolição, reflorestamento e peças certificadas, garantindo beleza, durabilidade e respeito ao meio ambiente.</p>
+            <div class="story-text">
+                <p>A história desse artesão é daquelas que inspiram. Seu talento foi descoberto após os 50 anos, provando que <span class="highlight">nunca é tarde para encontrar sua verdadeira paixão</span>.</p>
+                
+                <p>Sempre caprichoso e dedicado, já tinha o amor pelo artesanal — faltava apenas descobrir onde se destacaria. Foi na madeira que tudo ganhou forma.</p>
+                
+                <div class="highlight-quote">
+                    <i class="fas fa-quote-left"></i> O que começou com peças feitas à mão para presentear amigos e familiares revelou um dom especial. Hoje, cada criação carrega autenticidade, cuidado e significado.
+                </div>
+                
+                <p>Mais do que um produto, cada peça é feita com alma — pensada para encantar e fazer parte de momentos únicos.</p>
+            </div>
         </section>
 
-        <h2 class="section-title">Nossas Criações em Madeira</h2>
+        <!-- Timeline da Descoberta -->
+        <div class="discovery-timeline">
+            <h3><i class="fas fa-tree"></i> Minha Jornada na Madeira</h3>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4>Primeiros Presentes</h4>
+                    <p>Comecei fazendo peças para presentear amigos e familiares. Cada presente era único e feito com muito carinho.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Descoberta do Talento</h4>
+                    <p>Aos 50 anos, peguei um pedaço de madeira e comecei a esculpir. Foi amor à primeira vista.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Reconhecimento</h4>
+                    <p>Familiares e amigos incentivaram. Cada peça era admirada e encomendada.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h4>Hoje</h4>
+                    <p>Transformo madeira em arte, compartilhando minha paixão com o mundo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards de Artesanatos em Madeira -->
+        <h2 class="section-title">Peças Feitas com Alma</h2>
         <div class="cards-grid" id="cardsGrid">
             
             <!-- Card 1 - Casa Verde -->
             <div class="card">
                 <img class="card-image" src="imagens/casa_verde.png" alt="Casinha de Madeira Verde">
                 <div class="card-content">
-                    <h3 class="card-title">Casinha de Madeira Verde</h3>
-                    <p class="card-description">Peça única esculpida em madeira, com formas delicadas inspiradas na natureza. Acabamento artesanal impecável.</p>
+                    <h3 class="card-title">Casinha da Esperança</h3>
+                    <p class="card-description">A primeira peça que me fez acreditar no meu talento. Feita com madeira de ipê e muito significado.</p>
                     <p class="card-price">R$ 199,90</p>
                     <p class="card-material"><i class="fas fa-tree"></i> Madeira: Ipê - 35cm</p>
                 </div>
@@ -302,10 +552,10 @@
 
             <!-- Card 2 - Casa Verde 2 -->
             <div class="card">
-                <img class="card-image" src="imagens/casa_verde_2.png" alt="Casinha de Madeira Verde 2">
+                <img class="card-image" src="imagens/casa_verde_2.png" alt="Casinha Rústica">
                 <div class="card-content">
-                    <h3 class="card-title">Casinha Rústica</h3>
-                    <p class="card-description">Miniatura de casa em madeira, perfeita para decoração ou presente. Detalhes esculpidos à mão.</p>
+                    <h3 class="card-title">Refúgio Rústico</h3>
+                    <p class="card-description">Inspirada nas casinhas de interior, essa peça carrega a nostalgia e o aconchego do lar.</p>
                     <p class="card-price">R$ 179,90</p>
                     <p class="card-material"><i class="fas fa-tree"></i> Madeira: Cedro - 30cm</p>
                 </div>
@@ -313,10 +563,10 @@
 
             <!-- Card 3 - Casa Verde 3 -->
             <div class="card">
-                <img class="card-image" src="imagens/casa_verde_3.png" alt="Casinha de Madeira Verde 3">
+                <img class="card-image" src="imagens/casa_verde_3.png" alt="Casinha Decorativa">
                 <div class="card-content">
-                    <h3 class="card-title">Casinha Decorativa</h3>
-                    <p class="card-description">Peça decorativa em madeira, ideal para compor ambientes rústicos e aconchegantes.</p>
+                    <h3 class="card-title">Cantinho Aconchegante</h3>
+                    <p class="card-description">Uma peça que representa o lar que construímos com amor e dedicação ao longo da vida.</p>
                     <p class="card-price">R$ 159,90</p>
                     <p class="card-material"><i class="fas fa-tree"></i> Madeira: Freijó - 28cm</p>
                 </div>
@@ -324,10 +574,10 @@
 
             <!-- Card 4 - Casa Madeira -->
             <div class="card">
-                <img class="card-image" src="imagens/casa_madeira.png" alt="Casinha de Madeira Natural">
+                <img class="card-image" src="imagens/casa_madeira.png" alt="Casinha Natural">
                 <div class="card-content">
-                    <h3 class="card-title">Casinha Natural</h3>
-                    <p class="card-description">Escultura em madeira com acabamento natural, preservando a beleza original da madeira.</p>
+                    <h3 class="card-title">Essência Natural</h3>
+                    <p class="card-description">Preservando a beleza original da madeira, essa peça simboliza a descoberta do meu talento genuíno.</p>
                     <p class="card-price">R$ 219,90</p>
                     <p class="card-material"><i class="fas fa-tree"></i> Madeira: Jatobá - 32cm</p>
                 </div>
@@ -335,10 +585,10 @@
 
             <!-- Card 5 - Casa Vermelho -->
             <div class="card">
-                <img class="card-image" src="imagens/casa_vermelho.png" alt="Casinha de Madeira Vermelha">
+                <img class="card-image" src="imagens/casa_vermelho.png" alt="Casinha Charmosa">
                 <div class="card-content">
-                    <h3 class="card-title">Casinha Charmosa</h3>
-                    <p class="card-description">Peça exclusiva com detalhes em pintura artesanal. Perfeita para colecionadores.</p>
+                    <h3 class="card-title">Coração em Madeira</h3>
+                    <p class="card-description">Feita com todo o capricho que sempre me acompanhou. Uma peça que representa minha paixão pela madeira.</p>
                     <p class="card-price">R$ 239,90</p>
                     <p class="card-material"><i class="fas fa-tree"></i> Madeira: Peroba - 35cm</p>
                 </div>
@@ -346,27 +596,57 @@
 
         </div>
 
+        <!-- Seção de Diferenciais -->
+        <div class="features">
+            <h3><i class="fas fa-heart"></i> O que torna minhas peças especiais?</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h4>Feitas à Mão</h4>
+                    <p>Cada peça é esculpida com dedicação e capricho, fruto de anos de aperfeiçoamento.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Madeira de Respeito</h4>
+                    <p>Utilizo madeiras certificadas e de reflorestamento, em harmonia com a natureza.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>Uma História</h4>
+                    <p>Cada peça carrega um pedaço da minha jornada. São mais que objetos, são memórias.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-gem"></i>
+                    <h4>Exclusividade</h4>
+                    <p>Peças únicas, como a descoberta do meu talento após os 50 anos: singular e inesquecível.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de Ação -->
         <div class="buttons-section">
             <a href="#" class="btn-whatsapp" id="whatsappBtn">
-                <i class="fab fa-whatsapp fa-lg"></i> Comprar pelo WhatsApp
+                <i class="fab fa-whatsapp fa-lg"></i> Quero uma peça especial
             </a>
             <a href="https://www.instagram.com/clodoaldodsan" target="_blank" class="btn-instagram">
-                <i class="fab fa-instagram fa-lg"></i> Siga-nos no Instagram
+                <i class="fab fa-instagram fa-lg"></i> Acompanhe minha jornada
             </a>
         </div>
 
+        <!-- Banner de Contato -->
         <div class="contact-banner">
-            <h3>✨ Encomende sua peça exclusiva em madeira! ✨</h3>
-            <p>Quer uma peça personalizada? Entre em contato e transforme sua ideia em realidade.</p>
+            <h3>✨ Quer uma peça feita especialmente para você? ✨</h3>
+            <p>Assim como descobri meu talento na madeira, posso criar algo único que conte a sua história. Vamos conversar?</p>
             <a href="#" class="btn-banner" id="whatsappBannerBtn">
-                <i class="fab fa-whatsapp"></i> Fale Conosco
+                <i class="fab fa-whatsapp"></i> Fale comigo
             </a>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 O Artesão Nato - Artesanato em Madeira</p>
-        <p>Transformando madeira em arte com amor e dedicação 🌳</p>
+        <p>Descobri aos 50 que a madeira esperava por mim. Hoje transformo cada pedaço em arte.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">🌳 Nunca é tarde para descobrir seu talento 🌳</p>
         <p>
             <a href="https://www.instagram.com/clodoaldodsan" target="_blank" style="color: #d4c5b5;">
                 <i class="fab fa-instagram"></i> @clodoaldodsan
@@ -378,7 +658,7 @@
         // COLOQUE SEU NÚMERO DO WHATSAPP AQUI (com DDD, sem espaços)
         const WHATSAPP_NUMBER = '5511999999999';
         
-        function getWhatsAppLink(message = 'Olá! Vi os artesanatos em madeira no site e tenho interesse em fazer um pedido.') {
+        function getWhatsAppLink(message = 'Olá! Fiquei emocionado com sua história e gostaria de saber mais sobre suas peças em madeira.') {
             return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         }
         
@@ -393,7 +673,7 @@
             const title = card.querySelector('.card-title')?.innerText || 'produto';
             const price = card.querySelector('.card-price')?.innerText || '';
             card.addEventListener('click', () => {
-                const message = `Olá! Tenho interesse no produto: ${title} - ${price}. Poderia me passar mais informações?`;
+                const message = `Olá! Me interessei pela peça "${title}" - ${price}. Adorei sua história e gostaria de saber mais detalhes.`;
                 window.open(getWhatsAppLink(message), '_blank');
             });
         });
