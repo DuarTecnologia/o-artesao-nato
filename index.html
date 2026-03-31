@@ -209,6 +209,44 @@
             gap: 5px;
         }
 
+        /* Seção Instagram Feed */
+        .instagram-feed {
+            background: linear-gradient(135deg, #e8dfd3 0%, #dacfbf 100%);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .instagram-feed h3 {
+            font-size: 1.8rem;
+            color: #5a3a2a;
+            margin-bottom: 1rem;
+        }
+
+        .instagram-feed p {
+            margin-bottom: 1.5rem;
+            color: #6b4c38;
+        }
+
+        .btn-instagram-feed {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-instagram-feed:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
         /* Seção de Diferenciais */
         .features {
             background: linear-gradient(135deg, #e8dfd3 0%, #dacfbf 100%);
@@ -380,7 +418,7 @@
                 font-size: 1.3rem;
             }
 
-            .features {
+            .features, .instagram-feed {
                 padding: 2rem;
             }
         }
@@ -408,6 +446,8 @@
         <!-- Cards de Artesanatos em Madeira -->
         <h2 class="section-title">Nossas Criações em Madeira</h2>
         <div class="cards-grid" id="cardsGrid">
+            <!-- IMPORTANTE: Substitua as URLs das imagens pelas FOTOS REAIS do seu Instagram -->
+            
             <!-- Card 1 - Escultura em Madeira -->
             <div class="card">
                 <img class="card-image" src="https://images.unsplash.com/photo-1562329267-1a5e9f0d8f8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Escultura em Madeira">
@@ -497,6 +537,15 @@
             </div>
         </div>
 
+        <!-- Seção Instagram - Link Direto para seu Perfil -->
+        <div class="instagram-feed">
+            <h3><i class="fab fa-instagram"></i> Siga nosso trabalho no Instagram!</h3>
+            <p>Acompanhe os bastidores, novidades e peças exclusivas em nosso perfil. Veja todo o processo criativo de cada obra em madeira.</p>
+            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" class="btn-instagram-feed" id="instagramProfileBtn">
+                <i class="fab fa-instagram fa-lg"></i> @clodoaldodsan
+            </a>
+        </div>
+
         <!-- Seção de Diferenciais -->
         <div class="features">
             <h3 style="font-size: 1.8rem; color: #5a3a2a;">Por que escolher nosso trabalho?</h3>
@@ -529,7 +578,7 @@
             <a href="#" class="btn-whatsapp" id="whatsappBtn">
                 <i class="fab fa-whatsapp fa-lg"></i> Comprar pelo WhatsApp
             </a>
-            <a href="#" class="btn-instagram" id="instagramBtn">
+            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" class="btn-instagram" id="instagramBtn">
                 <i class="fab fa-instagram fa-lg"></i> Siga-nos no Instagram
             </a>
         </div>
@@ -547,21 +596,22 @@
     <footer>
         <p>&copy; 2024 O Artesão Nato - Artesanato em Madeira</p>
         <p style="margin-top: 10px; font-size: 0.9rem;">Transformando madeira em arte com amor e dedicação 🌳</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            <a href="https://www.instagram.com/clodoaldodsan" target="_blank" style="color: #d4c5b5; text-decoration: none;">
+                <i class="fab fa-instagram"></i> @clodoaldodsan
+            </a>
+        </p>
     </footer>
 
     <script>
         // CONFIGURAÇÃO - SUBSTITUA PELOS SEUS DADOS REAIS
         const WHATSAPP_NUMBER = '5511999999999'; // Coloque seu número com DDD (ex: 5511999999999)
-        const INSTAGRAM_USERNAME = 'artesaonato'; // Coloque seu @ do Instagram
+        const INSTAGRAM_URL = 'https://www.instagram.com/clodoaldodsan'; // Link do Instagram já configurado
         
         const DEFAULT_MESSAGE = 'Olá! Vi os artesanatos em madeira no site e tenho interesse em fazer um pedido.';
         
         function getWhatsAppLink(message = DEFAULT_MESSAGE) {
             return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-        }
-        
-        function getInstagramLink() {
-            return `https://instagram.com/${INSTAGRAM_USERNAME}`;
         }
         
         function updateWhatsAppButtons() {
@@ -573,15 +623,6 @@
                 button.target = '_blank';
                 button.rel = 'noopener noreferrer';
             });
-        }
-        
-        function updateInstagramButton() {
-            const instagramBtn = document.getElementById('instagramBtn');
-            if (instagramBtn) {
-                instagramBtn.href = getInstagramLink();
-                instagramBtn.target = '_blank';
-                instagramBtn.rel = 'noopener noreferrer';
-            }
         }
         
         function setupCardClick() {
@@ -601,7 +642,6 @@
         
         document.addEventListener('DOMContentLoaded', () => {
             updateWhatsAppButtons();
-            updateInstagramButton();
             setupCardClick();
         });
     </script>
